@@ -1,11 +1,175 @@
-[+] Inroduction of Array
---> Array is a Finite, Ordered set of same data type element.
---> Basically Array are two type 
-      1. One-Dimensional Array
-      2. Multy-Dimensional Array
+// Selection_sort_Array.cpp : Arvind Sharma
+// Discription : Selection Sort Performing Using Array.
+// Contact : arvindsharma4575@gmail.com
 
-We will Perform Operation on Array
-      1. Insertion
-      2. Deletion
-      3. Sorting
-      
+
+// Include header file.
+#include<iostream>
+#include<process.h>
+#include<conio.h>
+using namespace std;
+
+void Sort_board(){
+	cout<<"\n\
+	********************************************\n\
+	*          Sorting of Array Element        *\n\
+	********************************************\n";
+}
+
+
+int main(){
+	// Define  variable.
+	int Array[30];
+	int size;
+	
+	;int option;
+	// ------------------------------------------
+	// Taking input from user.
+	
+	Sort_board();	
+	
+	cout<<"--> Select of the Option :) "<<endl;
+	cout<<"1. Ascending Order "<<endl;
+	cout<<"2. Descending Order "<<endl;
+	cout<<"3. Exit "<<endl;
+	
+	do{
+	
+	while(!(cin>>option)){
+		cout<<"Enter the Number only!!";
+		cin.clear();
+		cin.ignore(1,'\n');
+		if(option>3){
+		cout<<"Choose only Given Option !!!"<<endl;
+	}
+	}
+	
+	
+	
+	if(option==1){
+	
+	// Define  variable.
+	int Array[30];
+	int size;
+	cout<<"Enter the Size of Array --> ";
+	cin>>size;
+	
+	// for loop to accept input.
+	for(int i=1;i<=size;i++){
+		cin>>Array[i];
+	}
+	//-------------------------------------------
+	// Performing Selection Sort Process.
+	
+	// Inilialization of Pass.
+	for(int k=1;k<=size-1;k++){
+		int  min=Array[k];   // initialize of min selection variable.
+		int position=k;      // Position variable. 
+		
+		// selection of smallest variable in the Array.
+		for(int i=k+1;i<=size;i++){
+			if(min<Array[i]){
+				min=Array[i];
+				position=i;
+			}
+		}
+		
+		// Performing interchange of element in Array.
+		if(position!=k){
+			int temp=Array[k];
+			Array[k]=Array[position];
+			Array[position]=temp;
+		}
+	} 
+	
+	//---------------------------------------------------
+	// Showing output.
+	cout<<"********<Sorted Array>********"<<endl;
+	for(int i=1;i<=size;i++){
+		cout<<Array[i]<<endl;
+	}
+	
+	
+}
+	if(option==2){
+	
+	// Define  variable.
+	int Array[30];
+	int size;
+	cout<<"Enter the Size of Array --> ";
+	cin>>size;
+	
+	// for loop to accept input.
+	for(int i=1;i<=size;i++){
+		cin>>Array[i];
+	}
+	//-------------------------------------------
+	// Performing Selection Sort Process.
+	
+	// Inilialization of Pass.
+	for(int k=1;k<=size-1;k++){
+		int  min=Array[k];   // initialize of min selection variable.
+		int position=k;      // Position variable. 
+		
+		// selection of smallest variable in the Array.
+		for(int i=k+1;i<=size;i++){
+			if(min<Array[i]){
+				min=Array[i];
+				position=i;
+			}
+		}
+		
+		// Performing interchange of element in Array.
+		if(position!=k){
+			int temp=Array[k];
+			Array[k]=Array[position];
+			Array[position]=temp;
+		}
+	} 
+	
+	//---------------------------------------------------
+	// Showing output.
+	cout<<"********<Sorted Array>********"<<endl;
+	for(int i=1;i<=size;i++){
+		cout<<Array[i]<<endl;
+	}
+	
+	//-------------------------------------------
+	// Performing Selection Sort Process.
+	
+	// Inilialization of Pass.
+	for(int k=1;k<=size-1;k++){
+		int  max=Array[k];   // initialize of min selection variable.
+		int position=k;      // Position variable. 
+		
+		// selection of smallest variable in the Array.
+		for(int i=k+1;i<=size;i++){
+			if(max>Array[i]){
+				max=Array[i];
+				position=i;
+			}
+		}
+		
+		// Performing interchange of element in Array.
+		if(position!=k){
+			int temp=Array[k];
+			Array[k]=Array[position];
+			Array[position]=temp;
+		}
+	} 
+	
+	//---------------------------------------------------
+	// Showing output.
+	cout<<"********<Sorted Array>********"<<endl;
+	for(int i=1;i<=size;i++){
+		cout<<Array[i]<<endl;
+	}	
+		
+	}
+	
+}while(option!=3);
+
+cout<<"ALL DONE  ;-)";
+	
+	return 0;
+}
